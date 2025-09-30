@@ -54,8 +54,4 @@ _deps
 
 # End of https://www.toptal.com/developers/gitignore/api/c++,cmake
 
-1
-2
-3
-4
-5
+build
