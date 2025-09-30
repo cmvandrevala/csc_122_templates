@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "complex_number.hpp"
+#include "custom_ostream.hpp"
 
 using namespace std;
 
@@ -13,7 +14,7 @@ T my_add(T x, T y)
 template <typename T>
 T my_max(T x, T y)
 {
-    return (x < y) ? y : x;
+  return (x < y) ? y : x;
 }
 
 int main()
@@ -48,9 +49,7 @@ int main()
 
   ComplexNumber c1 = ComplexNumber(1, 2);
   ComplexNumber c2 = ComplexNumber(3, 4);
-  ComplexNumber result = my_add(c1, c2);
-  ComplexNumber max = my_max(c1, c2);
 
-  result.pp();
-  max.pp();
+  cout << "Adding Complex Numbers: " << my_add(c1, c2) << endl;
+  cout << "Max of Complex Numbers: " << my_max(c1, c2) << endl;
 }

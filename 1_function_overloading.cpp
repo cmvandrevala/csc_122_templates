@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "complex_number.hpp"
+#include "custom_ostream.hpp"
 
 using namespace std;
 
@@ -53,7 +54,6 @@ int main()
 
   ComplexNumber c1 = ComplexNumber(1, 2);
   ComplexNumber c2 = ComplexNumber(3, 4);
-  ComplexNumber result = my_add(c1, c2);
 
-  result.pp();
+  cout << my_add(c1, c2) << endl;
 }

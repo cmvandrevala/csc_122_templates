@@ -1,15 +1,14 @@
-#include <string>
+#pragma once
 
-using namespace std;
+#include <string>
 
 class Planet
 {
 public:
-  string name;
+  std::string name;
   float distance;
 
   Planet();
-  Planet(string name, float distance);
+  Planet(std::string name, float distance);
   bool operator<(Planet planet);
-  void print();
 };

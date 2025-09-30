@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "complex_number.hpp"
+#include "custom_ostream.hpp"
 
 using namespace std;
 
@@ -20,18 +21,19 @@ int main()
     float d = 7.3;
     cout << "Two Floats: " << my_max(c, d) << endl;
 
+    // uh oh... what is happening here?
     int e = 5;
     float f = 7.3;
-    cout << "Int and float: " << my_max(e, f) << endl; // uh oh... what is happening here?
+    cout << "Int and float: " << my_max(e, f) << endl;
 
     ComplexNumber g(3, 4);
     ComplexNumber h(7, 1);
-    cout << "Two Complex Numbers: ";
-    my_max(g, h).pp();
+    cout << "Two Complex Numbers: " << my_max(g, h) << endl;
 
+    // Uh oh... Why doesn't this compile?
     // int i = 5;
     // ComplexNumber j(7, 2);
-    // cout << "Int and complex number: " << my_max(i, j) << endl; // uh oh... what is happening here?
+    // cout << "Int and complex number: " << my_max(i, j) << endl;
 
     return 0;
 }

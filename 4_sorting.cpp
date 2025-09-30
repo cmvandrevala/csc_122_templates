@@ -2,8 +2,7 @@
 
 #include "complex_number.hpp"
 #include "planet.hpp"
-
-using namespace std;
+#include "custom_ostream.hpp"
 
 template <class T>
 void bubbleSort(T a[], int n)
@@ -11,38 +10,38 @@ void bubbleSort(T a[], int n)
   for (int i = 0; i < n - 1; i++)
     for (int j = n - 1; i < j; j--)
       if (a[j] < a[j - 1])
-        swap(a[j], a[j - 1]);
+        std::swap(a[j], a[j - 1]);
 }
 
 int main()
 {
   // INTEGERS
 
-  int a[5] = {10, 50, 30, 40, 20};
+  int integers[5] = {10, 50, 30, 40, 20};
 
-  bubbleSort<int>(a, 5);
+  bubbleSort<int>(integers, 5);
 
   for (int i = 0; i < 5; i++)
   {
-    cout << a[i] << endl;
+    std::cout << integers[i] << std::endl;
   }
 
-  cout << endl;
-  cout << endl;
+  std::cout << std::endl;
+  std::cout << std::endl;
 
   // COMPLEX NUMBERS
 
-  ComplexNumber complex[4] = {ComplexNumber(5, -1), ComplexNumber(2, 7), ComplexNumber(1, 0), ComplexNumber(0, 2)};
+  ComplexNumber complex_numbers[4] = {ComplexNumber(5, -1), ComplexNumber(2, 7), ComplexNumber(1, 0), ComplexNumber(0, 2)};
 
-  bubbleSort<ComplexNumber>(complex, 4);
+  bubbleSort<ComplexNumber>(complex_numbers, 4);
 
   for (int i = 0; i < 4; i++)
   {
-    complex[i].pp();
+    std::cout << complex_numbers[i] << std::endl;
   }
 
-  cout << endl;
-  cout << endl;
+  std::cout << std::endl;
+  std::cout << std::endl;
 
   // PLANETS
 
@@ -59,7 +58,7 @@ int main()
 
   for (int i = 0; i < 8; i++)
   {
-    planets[i].print();
+    std::cout << planets[i] << std::endl;
   }
 
   return 0;
